@@ -15,6 +15,10 @@ const saveSettings = async () => {
     }});
 }
 
+const clearHistory = async() => {
+    await browser.storage.local.set({"videos": []});
+}
+
 const validateInput = () => {
     
 }

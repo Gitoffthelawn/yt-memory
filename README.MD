@@ -22,3 +22,7 @@ I wrote this just to solve this problem for myself (and I'd never written an add
 
 ### 1.1.1
 - Fix the extension not finding any videos
+
+### 1.1.2
+- Fix video selector again
+- Add initial video check without having to scroll

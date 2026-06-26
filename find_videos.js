@@ -33,7 +33,7 @@ const findVideos = async () => {
     if (videos === undefined) videos = [];
 
     // find new ones and insert into array
-    document.querySelectorAll(".yt-lockup-metadata-view-model-wiz__title, .yt-lockup-metadata-view-model__title").forEach(el => {
+    document.querySelectorAll(".ytLockupMetadataViewModelTitle").forEach(el => {
         let video = handleVideo(el);
         if (video !== null) {
             videos = videos.filter(e => e.url != video.url);
@@ -49,3 +49,4 @@ const findVideos = async () => {
 }
 
 document.addEventListener("scroll", findVideos);
+setTimeout(findVideos, 500); // this is hacky, but it's the most simple way of achieving this...
